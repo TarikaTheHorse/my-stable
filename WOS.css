@@ -1,6 +1,6 @@
-.button1 {
+.button {
 	transition-duration: 0.5s;
-	border-color: #000;
+	border-color: #777;
 	color: #000;
 	cursor: pointer;
 	padding: 4px 4px;
@@ -8,6 +8,10 @@
 	display: inline-block;
 	border: 2px;
 	background-color: #fdfef8;
+}
+.button1{
+	color: #000;
+	background-color: #fdfef8
 }
 .button1:hover {
 	color: #fff;
