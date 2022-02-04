@@ -1,4 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Montagu+Slab:wght@100;200;300;400;500;600;700&display=swap');
+html {
+  scroll-behavior: smooth;
+}
 body{
   font-family: "Montagu Slab", serif;
   font-size: 16px;
@@ -10,7 +13,7 @@ body{
 nav {
   position: sticky;
   top: 0px;
-  height: 5rem;
+  height: 12vh;
   background-color: darkslategray;
   display: flex;
   flex-direction: row;
@@ -39,16 +42,47 @@ h2 {
   font-size: 1.5rem;
   color: firebrick;
 }
+.about-me {
+  height: inherit;
+  color: firebrick;
+  margin-bottom: 5vh;
+}
+.about-me-header {
+  color: firebrick;
+  font-size: 3rem;
+  line-height: 3rem;
+}
+.container {
+  display: flex;
+  margin: auto;
+  flex-direction: row;
+  justify-content: space-around;
+  width: 70vw;
+  background-color: floralwhite;
+  box-shadow: 0px 0px 15px 2px gray;
+}
+.profile-pic {
+  width: 50%;
+  height: auto;
+  align-self:center;
+  padding: 5%;
+}
+.bio {
+  margin: 0;
+  padding: 0;
+  text-align: justify;
+  padding: 5%;
+}
 .projects {
-  height: 200vh;
+  height: inherit;
   width: auto;
-  background: linear-gradient(to bottom, #2f4f4f 0%, #483d8b 100%);
+  background: linear-gradient(to bottom, darksalmon 0%, floralwhite 100%);
   display: flex;
   flex-direction: column;
 }
 .projects-header {
   display: flex;
-  color: darkturquoise;
+  color: #ff9966;
   align-self: stretch;
   justify-content: center;
   font-size: 2rem;
@@ -71,16 +105,18 @@ h2 {
 p > a {
   text-decoration: none;
   color: floralwhite;
+  transition-duration: 0.3s;
 }
 p > a:hover {
   color: darksalmon;
 }
 h2 > a {
   text-decoration: none;
-  color: darkturquoise;
+  color: firebrick;
+  transition-duration: 0.3s;
 }
 h2 > a:hover {
-  color: indigo;
+  color: darkslategray;
 }
 .links {
   height: 100vh;
@@ -97,7 +133,8 @@ h2 > a:hover {
 }
 .links > h2 > a {
   color: floralwhite;
+  transition-duration: 0.3s;
 }
 .links > h2 > a:hover {
-  color: darkslategray;
+  color: salmon;
 }
