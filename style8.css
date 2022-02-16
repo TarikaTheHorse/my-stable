@@ -99,7 +99,7 @@ svg {
     --segment-edge-stroke-width: 9;
     --segment-fill-fill-hover: darkseagreen;
     --segment-fill-stroke-hover: none;
-    --segment-edge-stroke-hover: green;
+    --segment-edge-stroke-hover: pink;
   }
   
   /*
@@ -119,7 +119,7 @@ svg {
   }
   
   #inner-petals .segment:hover > .segment-fill {
-    fill: darkseagreen;
+    fill: lightpink;
     stroke: none;
   }
   
