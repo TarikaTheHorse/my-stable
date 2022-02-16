@@ -64,31 +64,6 @@ svg {
     --segment-edge-stroke-hover: slateblue;
   }
   
-  /*
-   Non-standard way of styling elements referenced via <use> elements,
-   supported by some older browsers
-  */
-  #outer-petals .segment-fill {
-    fill: azure;
-    stroke: lightsteelblue;
-    stroke-width: 1;
-  }
-  
-  #outer-petals .segment-edge {
-    fill: none;
-    stroke: deepskyblue;
-    stroke-width: 3;
-  }
-  
-  #outer-petals .segment:hover > .segment-fill {
-    fill: plum;
-    stroke: none;
-  }
-  
-  #outer-petals .segment:hover > .segment-edge {
-    stroke: slateblue;
-  }
-  
   /* inner petals */
   #inner-petals {
     --segment-fill-fill: yellow;
@@ -97,32 +72,7 @@ svg {
     --segment-edge-fill: none;
     --segment-edge-stroke: yellowgreen;
     --segment-edge-stroke-width: 9;
-    --segment-fill-fill-hover: darkseagreen;
+    --segment-fill-fill-hover: pink;
     --segment-fill-stroke-hover: none;
-    --segment-edge-stroke-hover: pink;
-  }
-  
-  /*
-   Non-standard way of styling elements referenced via <use> elements,
-   supported by some older browsers
-  */
-  #inner-petals .segment-fill {
-    fill: yellow;
-    stroke: yellow;
-    stroke-width: 1;
-  }
-  
-  #inner-petals .segment-edge {
-    fill: none;
-    stroke: yellowgreen;
-    stroke-width: 9;
-  }
-  
-  #inner-petals .segment:hover > .segment-fill {
-    fill: lightpink;
-    stroke: none;
-  }
-  
-  #inner-petals .segment:hover > .segment-edge {
-    stroke: green;
+    --segment-edge-stroke-hover: green;
   }
