@@ -10,6 +10,7 @@
     body, html {
         margin: 0;
         overflow: hidden;
+        font-size: 16px;
     }
     .background {
         background: linear-gradient(135deg, lightgreen, teal);
@@ -37,35 +38,239 @@
         height: 7vw;
     }
     .MainTitle {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
+        position: absolute;
+        top: 0;
+        left: 0;
+        margin: auto;
         width: 100%;
         height: 100%;
         color: white;
-        font-family: sans-serif;
+        font-family: "Roboto";
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .welcome {
+        display: flex;
+        flex-direction: column;
+    }
+    @font-face {
+        font-family: "Roboto";
+        src: url(fonts/Roboto/Roboto-Regular.ttf);
+    }
+    @font-face {
+        font-family: "Roboto Mono";
+        src: url(fonts/Roboto_Mono/RobotoMono-VariableFont_wght.ttf);
     }
     h1 {
-        font-size: 4em;
+        font-size: 3em;
     }
     h2 {
-        font-size: 2.5em;
+        font-size: 1.5em;
+    }
+    #crossA1 {
+        stroke: white;
+        stroke-width: 3;
+        fill: transparent;
+        position: absolute;
+        top: 5vh;
+        right: 9vw;
+    }
+    #crossA2 {
+        stroke: white;
+        stroke-width: 3;
+        fill: transparent;
+        position: absolute;
+        bottom: 5vh;
+        left: 9vw;
+    }
+    #crossB1 {
+        stroke: white;
+        stroke-width: 3;
+        fill: transparent;
+        position: absolute;
+        top: 12vh;
+        right: 15vw;
+        transform-origin: center;
+        transform: scale(2);
+    }
+    #crossB2 {
+        stroke: white;
+        stroke-width: 3;
+        fill: transparent;
+        position: absolute;
+        bottom: 12vh;
+        left: 15vw;
+        transform-origin: center;
+        transform: scale(2);
+    }
+    #crossC1 {
+        position: absolute;
+        stroke: white;
+        stroke-width: 3;
+        fill: transparent;
+        position: absolute;
+        top: 20vh;
+        right: 10vw;
+        transform-origin: center;
+        transform: scale(4);
+    }
+    #crossC2 {
+        position: absolute;
+        stroke: white;
+        stroke-width: 3;
+        fill: transparent;
+        bottom: 20vh;
+        left: 10vw;
+        transform-origin: center;
+        transform: scale(4);
+    }
+    #circuit1 {
+        transform: scale(0.30);
+        fill: transparent;
+        stroke: white;
+        stroke-width: 1;
+    }
+    #circuit2a {
+        position: absolute;
+        top: -5vh;
+        left: 20vw;
+        transform: rotate(-45deg) scale(0.15);
+        transform-origin: center;
+    }
+    #circuit2b {
+        position: absolute;
+        bottom: -5vh;
+        right: 20vw;
+        transform: rotate(-45deg) scale(0.15);
+        transform-origin: center;
+    }
+    #circuit3a {
+        position: absolute;
+        top: 13vh;
+        left: -22vw;
+        transform: rotate(-45deg) scale(0.1);
+        transform-origin: center;
+    }
+    #circuit3b {
+        position: absolute;
+        bottom: 13vh;
+        right: -22vw;
+        transform: rotate(-45deg) scale(0.1);
+        transform-origin: center;
+    }
+    #circuit4a {
+        position: absolute;
+        top: -33vh;
+        left: -39vw;
+        transform: rotate(-45deg) scale(0.2);
+        transform-origin: center;
+    }
+    #circuit4b {
+        position: absolute;
+        bottom: -33vh;
+        right: -39vw;
+        transform: rotate(135deg) scale(0.2);
+        transform-origin: center;
+    }
+    .decorative-svgs {
+        width: 100%;
+        height: 100%;
+    }
+    .enter {
+        background: transparent;
+        border: 2px solid white;
+        padding: 1em 2.5em 1em 2.5em;
+        margin: 1em;
+        font: 800 1.5em 'Roboto Mono';
+        color: white;
+        transition-duration: 0.5s;
+        mix-blend-mode: screen;
+    }
+    .enter:hover {
+        background-color: white;
+        color: black;
+    }
+    .circuits2 {
+        animation: flicker 4s infinite;
+    }
+    @keyframes flicker {
+        0% {opacity: 1;}
+        49.5% {opacity: 1;}
+        50% {opacity: 0.1;}
+        50.5% {opacity: 1;}
+        56% {opacity: 1;}
+        58% {opacity: 0.2;}
+        60% {opacity: 1;}
+        100% {opacity: 1;}
+    }
+    .circuits3 {
+        animation: flicker 3s 2s infinite;
+    }
+    .circuits4 {
+        animation: flicker 5s 1s infinite;
     }
 </style>
 <body>
     <header class="background">
-        <div class="arrow" alt=""></div>
-        <div class="arrow" style="transform: translate(-20vw, 8vw) rotate(225deg); bottom: 0; right: 0;" alt=""></div>
+        <div class="arrows">
+            <div class="arrow" alt=""></div>
+            <div class="arrow" style="transform: translate(-20vw, 8vw) rotate(225deg); bottom: 0; right: 0;" alt=""></div>
+        </div>
+        <div class="decorative-svgs">
+            <div class="crosses">
+                <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="15" height="15" viewBox="0 0 30 30" id="crossA1">
+                    <polyline points="20 20, 30 20, 10 20, 20 20, 20 10, 20 30"/>
+                </svg>
+                <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="15" height="15" viewBox="0 0 30 30" id="crossA2">
+                    <polyline points="20 20, 30 20, 10 20, 20 20, 20 10, 20 30"/>
+                </svg>
+                <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="15" height="15" viewBox="0 0 30 30" id="crossB1">
+                    <polyline points="20 20, 30 20, 10 20, 20 20, 20 10, 20 30"/>
+                </svg>
+                <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="15" height="15" viewBox="0 0 30 30" id="crossB2">
+                    <polyline points="20 20, 30 20, 10 20, 20 20, 20 10, 20 30"/>
+                </svg>
+                <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="15" height="15" viewBox="0 0 30 30" id="crossC1">
+                    <polyline points="20 20, 30 20, 10 20, 20 20, 20 10, 20 30"/>
+                </svg>
+                <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="15" height="15" viewBox="0 0 30 30" id="crossC2">
+                    <polyline points="20 20, 30 20, 10 20, 20 20, 20 10, 20 30"/>
+                </svg>
+            </div>
+            <div class="circuits2">
+                <img src="https://tarikathehorse.github.io/my-stable/circuit.svg" alt="" id="circuit2a">
+                <img src="circuit.svg" alt="" id="circuit2b">
+            </div>
+            <div class="circuits3">
+                <img src="circuit.svg" alt="" id="circuit3a">
+                <img src="circuit.svg" alt="" id="circuit3b">
+                </svg>
+            </div>
+            <div class="circuits4">
+                <img src="circuit angle.svg" alt="" id="circuit4a">
+                <img src="circuit angle.svg" alt="" id="circuit4b">
+            </div>
+        </div>
         <div class="MainTitle">
-            <h1>Welcome!</h1>
-            <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100vh" height="20">
-                <line x1="3%" x2="97%" y1="50%" y2="50%" stroke="white" stroke-width="3" />
-                <circle cx="2%" cy="50%" r="7" fill="none" stroke="white" stroke-width="3"/>
-                <circle cx="98%" cy="50%" r="7" fill="none" stroke="white" stroke-width="3"/>
-            </svg>
+            <div class="welcome">
+                <h1>Welcome!</h1>
+                <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="15%" id="circuit1" viewBox="0 0 100 6">
+                    <line x1="7" x2="93" y1="3" y2="3"/>
+                    <circle cx="4" cy="3" r="3"/>
+                    <circle cx="96" cy="3" r="3"/>
+                </svg>
             <h2>Stay awhile!</h2>
+            </div>
+            <a href="">
+                <button class="enter">Enter</button>
+            </a>
         </div>
     </header>
 </body>
+<script src="https://code.jquery.com/jquery-3.3.1.js">
+    
+</script>
 </html>
